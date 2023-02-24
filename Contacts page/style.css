@@ -1,0 +1,370 @@
+body {
+  margin: 0 auto;
+  font-size: 14px;
+}
+.main {
+  padding-top: 4px;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  position: relative;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu a {
+  transition: color 0.4s ease-in-out;
+}
+.menu a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background-color: #ad776b;
+  transition: width 0.5s ease-in-out;
+}
+.menu a:hover::after {
+  width: 100%;
+}
+.head-logo {
+  height: 4.25rem;
+  margin: 10px;
+}
+.wrap-logo {
+  height: 2.75rem;
+  margin: 5px;
+  float: left;
+}
+.menu {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 5px;
+  font-size: 19px;
+}
+
+.description {
+  width: 75%;
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  margin: 2.5rem auto;
+  font-family: system-ui;
+}
+
+.wrapper {
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 40px;
+  font-family: "Arial";
+  display: none;
+  border-radius: 10px;
+}
+
+#check-menu {
+  display: none;
+}
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: #ffffffa1;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  justify-content: center;
+  top: 0;
+  transform: translateY(0%);
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+
+.main-menu a {
+  display: block;
+  padding: 12px;
+  color: #4d4d4d;
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  margin: 3px 14px;
+  align-self: flex-start;
+}
+
+#check-menu:checked ~ .main-menu {
+  max-height: 100vh;
+  font-size: 23px;
+  border-radius: 5px;
+  background-color: rgb(249, 249, 249);
+}
+
+#check-menu:checked ~ .first {
+  display: none;
+}
+
+#check-menu:checked ~ .second {
+  transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third {
+  transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth {
+  display: none;
+}
+.label-checkmenu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.burger-line {
+  position: absolute;
+  border-radius: 3px;
+  top: 8px;
+  right: 10px;
+  z-index: 100;
+  width: 30px;
+  height: 2px;
+  background-color: #4d4d4d;
+  transition: 0.5s all;
+}
+.second,
+.third {
+  top: 15px;
+  z-index: 100;
+}
+
+.fourth {
+  top: 23px;
+}
+
+.treatment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.packages-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.packages-icons div img {
+  padding-top: 0.75rem;
+}
+
+.packages-icons div {
+  position: relative;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 5rem;
+}
+
+.packages-icons div p {
+  font-size: 19px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.packages-icons div:hover {
+  cursor: pointer;
+  color: #ad776b;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.lines {
+  position: absolute;
+  right: 0px;
+  background-color: rgb(249 249 249);
+  border-bottom-left-radius: 9999px;
+  width: 4.5rem;
+  height: 4rem;
+  z-index: 100;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: #f9f9f9;
+}
+.footer-logo {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  padding: 2rem;
+}
+.footer-logo img {
+  height: 4rem;
+}
+.social-networks {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
+.name-sign {
+  text-align: center;
+  padding: 1.25rem 0 0;
+  color: #ad776b;
+}
+
+.social-networks img {
+  margin: 0 1.25rem;
+}
+.social-networks img:hover {
+  background-color: #ad776b3b;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.foot-desc {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .description {
+    width: 50%;
+  }
+  .wrap-logo img {
+    height: 50px;
+  }
+
+  #check-menu:checked ~ .main-menu {
+    font-size: 32px;
+  }
+  .main-menu a {
+    margin: 16px 30px;
+  }
+  .packages-icons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .packages-icons div {
+    width: 35%;
+  }
+
+  .packages-icons div p {
+    font-size: 24px;
+  }
+
+  .foot-desc {
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .social-networks {
+    padding: 10px;
+  }
+  .name-sign {
+    padding: 0 0 0 1rem;
+    font-size: 17px;
+  }
+}
+@media (max-width: 1000px) {
+  .wrapper {
+    display: block;
+    z-index: 100;
+    margin-bottom: 15px;
+  }
+  .header {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    flex-direction: column-reverse;
+  }
+  .menu {
+    width: 88%;
+  }
+  .menu li {
+    margin-right: 2rem;
+  }
+  .menu a {
+    font-size: 1.5rem;
+  }
+
+  .main {
+    background-position: inherit;
+  }
+
+  .packages-icons {
+    width: 90%;
+    align-self: center;
+  }
+
+  .packages-icons div p {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .treatment {
+    padding: 2rem 0;
+  }
+
+  .name-sign {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu a {
+    font-size: 2rem;
+  }
+  .packages-icons div {
+    padding: 1.5rem;
+    width: 20%;
+  }
+  .packages-icons div p {
+    font-size: 1.75rem;
+  }
+  .packages-icons div img {
+    height: 2rem;
+  }
+}
