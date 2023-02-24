@@ -1,0 +1,649 @@
+body {
+  margin: 0 auto;
+  font-size: 14px;
+}
+.main {
+  background-image: url("./images/bgm.jpg");
+  padding-top: 4px;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  position: relative;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu a {
+  transition: color 0.4s ease-in-out;
+}
+.menu a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background-color: rgb(43, 36, 83);
+  transition: width 0.5s ease-in-out;
+}
+.menu a:hover::after {
+  width: 100%;
+}
+.head-logo {
+  height: 4.25rem;
+  margin: 10px;
+}
+.wrap-logo {
+  height: 2.75rem;
+  margin: 5px;
+  float: left;
+}
+.menu {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 5px;
+  font-size: 19px;
+}
+
+.wrapper {
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 40px;
+  font-family: "Arial";
+  display: none;
+  border-radius: 10px;
+}
+
+#check-menu {
+  display: none;
+}
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: #ffffffa1;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  justify-content: center;
+  top: 0;
+  transform: translateY(0%);
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+
+.main-menu a {
+  display: block;
+  padding: 12px;
+  color: #4d4d4d;
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  margin: 3px 14px;
+  align-self: flex-start;
+}
+
+#check-menu:checked ~ .main-menu {
+  max-height: 100vh;
+  font-size: 23px;
+  border-radius: 5px;
+  background-color: rgb(249, 249, 249);
+}
+
+#check-menu:checked ~ .first {
+  display: none;
+}
+
+#check-menu:checked ~ .second {
+  transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third {
+  transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth {
+  display: none;
+}
+.label-checkmenu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.burger-line {
+  position: absolute;
+  border-radius: 3px;
+  top: 8px;
+  right: 10px;
+
+  z-index: 100;
+
+  width: 30px;
+  height: 2px;
+  background-color: #4d4d4d;
+  transition: 0.5s all;
+}
+.second,
+.third {
+  top: 15px;
+
+  z-index: 100;
+}
+
+.fourth {
+  top: 23px;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: inherit;
+  padding: 1rem;
+}
+.discover-title {
+  font-weight: unset;
+  font-family: "Roboto";
+  font-style: normal;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #1c1b1b;
+  font-size: 32px;
+}
+.book {
+  background: none;
+  cursor: pointer;
+  border: 2px solid rgb(0 0 0 / 65%);
+  padding: 16px;
+  font-size: 20px;
+}
+
+.book:hover {
+  background-color: #ad776bc5;
+  color: white;
+  cursor: pointer;
+}
+
+.treatment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title-first {
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 30px 20px;
+}
+
+.packages-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.packages-icons div img {
+  height: 270px;
+  transition: transform 0.9s ease;
+}
+.packages-icons div:hover img {
+  transform: scale(1.2);
+}
+.packages-icons div {
+  position: relative;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.packages-icons p {
+  position: absolute;
+  margin: 0;
+  right: 0px;
+  background-color: aliceblue;
+  padding: 13px;
+  bottom: 2px;
+  font-size: 19px;
+  height: 18px;
+}
+.packages-icons div:hover {
+  color: #ad776b;
+  cursor: pointer;
+}
+.lines {
+  position: absolute;
+  right: 0px;
+  background-color: rgb(249 249 249);
+  border-bottom-left-radius: 9999px;
+  width: 4.5rem;
+  height: 4rem;
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  width: 90%;
+}
+.data div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 17px;
+  flex-wrap: wrap;
+  width: 81%;
+  background-color: #f9f9f9;
+}
+.data div:hover {
+  background-color: #eceaea;
+  cursor: pointer;
+}
+.about-numb {
+  font-size: 50px;
+  margin: 5px 0;
+  align-self: center;
+}
+.about-desc {
+  padding: 0 13px;
+  font-size: 19px;
+  text-align: center;
+}
+.more {
+  align-items: center;
+  background-image: url(./images/bg.png);
+  background-size: cover;
+  display: flex;
+  height: 14rem;
+  justify-content: center;
+}
+.info-more {
+  background-color: #ffffffe6;
+  width: 49%;
+  padding: 14px;
+  height: auto;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 24rem;
+  display: flex;
+  width: 91.666667%;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+.more-in {
+  color: black;
+  font-family: system-ui;
+}
+.info-more img {
+  height: 40px;
+}
+.cosmetics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.la-bios {
+  background-image: url(./images/bg-cosm.png);
+  background-size: cover;
+  width: 49%;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 5rem;
+  width: -webkit-fill-available;
+}
+
+.la-bios img {
+  height: 4.5rem;
+}
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.portf-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portf-pic img {
+  height: 14rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.loyalty-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.txt-card {
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: #f9f9f9;
+}
+.footer-logo {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  padding: 2rem;
+}
+.footer-logo img {
+  height: 4rem;
+}
+.social-networks {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
+.name-sign {
+  text-align: center;
+  padding: 1.25rem 0 0;
+  color: #ad776b;
+}
+.loyalty-desc {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.loyalty-desc img {
+  height: 11rem;
+  width: 16rem;
+}
+.social-networks img {
+  margin: 0 1.25rem;
+  cursor: pointer;
+}
+.foot-desc {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .wrap-logo img {
+    height: 50px;
+  }
+  .heading {
+    width: 46%;
+    padding: 0;
+    height: 56%;
+  }
+  .discover-title {
+    font-size: 39px;
+    padding-left: 7px;
+  }
+  #check-menu:checked ~ .main-menu {
+    font-size: 32px;
+  }
+  .main-menu a {
+    margin: 16px 30px;
+  }
+  .title-first {
+    font-size: 28px;
+  }
+  .packages-icons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .packages-icons p {
+    font-size: 24px;
+  }
+  .data {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .data div {
+    margin-bottom: 0px;
+    width: 30%;
+  }
+  .about-desc {
+    font-size: 22px;
+  }
+  .info-more img {
+    height: 50px;
+  }
+  .info-more {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .la-bios {
+    height: 9rem;
+  }
+  .la-bios img {
+    height: 7rem;
+  }
+  .portf-pic {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+  .portf-pic img {
+    height: 17rem;
+  }
+
+  .loyalty-desc {
+    flex-direction: row;
+    display: flex;
+    width: 95%;
+    align-items: center;
+  }
+  .txt-card {
+    font-size: 1.25rem;
+    line-height: 1.7rem;
+  }
+  .loyalty-desc img {
+    height: 17rem;
+    width: 24rem;
+  }
+  .foot-desc {
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .social-networks {
+    padding: 10px;
+  }
+  .name-sign {
+    padding: 0 0 0 1rem;
+    font-size: 17px;
+  }
+}
+@media (max-width: 1000px) {
+  .wrapper {
+    display: block;
+    z-index: 100;
+    margin-bottom: 15px;
+  }
+  .header {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu {
+    width: 88%;
+    justify-content: flex-start;
+  }
+  .menu li {
+    margin-right: 2rem;
+  }
+  .menu a {
+    font-size: 1.5rem;
+  }
+  .heading {
+    width: 52%;
+    height: 63%;
+  }
+  .title-first {
+    font-size: 2.25rem;
+  }
+  .main {
+    background-position: inherit;
+  }
+  .discover-title {
+    font-size: 3.5rem;
+  }
+  .book {
+    font-size: 26px;
+  }
+  .packages-icons {
+    width: 90%;
+    align-self: center;
+  }
+  .packages-icons div {
+    margin-bottom: 2rem;
+  }
+  .packages-icons div img {
+    height: 18rem;
+  }
+  .packages-icons p {
+    font-size: 1.75rem;
+    padding: 16px;
+    bottom: 0;
+  }
+  .about-desc {
+    font-size: 2rem;
+  }
+  .about-numb {
+    font-size: 3.75rem;
+    padding-top: 1rem;
+  }
+  .info-more img {
+    height: 5rem;
+  }
+  .more {
+    height: 19rem;
+  }
+  .info-more {
+    line-height: 1.75rem;
+    font-size: 1.75rem;
+    max-width: 39rem;
+  }
+  .la-bios {
+    height: 14rem;
+  }
+  .la-bios img {
+    height: 11rem;
+  }
+  .portf-pic img {
+    height: 23rem;
+    margin-bottom: 2rem;
+  }
+  .txt-card {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+  .loyalty-desc img {
+    height: 20rem;
+    width: 26rem;
+  }
+
+  .name-sign {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu a {
+    font-size: 2rem;
+  }
+  .packages-icons div img {
+    height: 22rem;
+  }
+  .discover-title {
+    font-size: 4rem;
+  }
+  .book {
+    font-size: 2rem;
+    padding: 1.55rem;
+  }
+  .packages-icons p {
+    height: 2rem;
+    font-size: 2rem;
+  }
+  .more-in {
+    padding: 0.5rem;
+  }
+  .portf-pic img {
+    height: 22rem;
+    margin-right: 5px;
+  }
+  .loyalty-desc {
+    width: 81%;
+  }
+  .txt-card {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .loyalty-desc img {
+    height: 22rem;
+    width: 28rem;
+  }
+}
+@media (min-width: 1200px) {
+  .portf-pic img {
+    height: 18rem;
+  }
+  .portf-pic {
+    width: 100%;
+  }
+}
