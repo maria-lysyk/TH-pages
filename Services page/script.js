@@ -1,10 +1,47 @@
-import data from './services.json' assert { type: "json" };
-console.log(data);
+import services from './services.js';
+  
+const buildCards = (data) => {
+    let servicesHtml = "";
+      
+  data.forEach((service) => {
+    let childrenService = "";
+    service.childrens.forEach((child) => {
+    childrenService += `
+      <div class="favor">
+      <div class="description">
+        <div class="title-s">${child.title}</div>
+        <div class="price">${child.price}</div>
+        <div class="info-b">${child.description}</div>
+        </div>
+        <button class="call">Call to book your visit</button>
+      </div>
+    `;
+    });
+      
+    servicesHtml += `
+      <div class="favor-name">
+        <div class="favor-desc">
+            <img src="${service.image}" alt="">
+            <div>
+              <h2>${service.title}</h2>
+              <p>${service.description}</p>
+            </div>
+        </div>
+      </div>
+      
+      <div class="services">
+        ${childrenService}
+      </div>
+    `;
+  });
+      
+    return servicesHtml;
+};
+    
+  const servFav = document.getElementById('favors');
+  servFav.innerHTML = buildCards(services);
+   
 
-// fetch('services.json')
-//   .then(response => response.json())
-//   .then(data => console.log(data))
-//   .catch(error => console.error(error));
   
 let butnGen = document.getElementById('read-more');
 let d=0;
