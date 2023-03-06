@@ -186,42 +186,40 @@ body {
   opacity: 0;
   animation: ani 2.5s forwards;
 }
+#master-n{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
 .masters {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-
-.packages-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.packages-icons div img {
-  height: 270px;
+.masters div img {
+  height: 18rem;
+  border-radius: 0.25rem;
   transition: transform 0.9s ease;
 }
-.packages-icons div:hover img {
+.masters div:hover img {
   transform: scale(1.1);
 }
 
-.packages-icons div {
+.masters div {
   position: relative;
   background-color: #f9f9f9;
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  width: 86%;
-
+  width: 80%;
   overflow: hidden;
   align-items: center;
 }
-.packages-icons div img {
-  height: 18rem;
-  border-radius: 0.25rem;
+
+.masters div:hover {
+  cursor: pointer;
 }
 
 .name {
@@ -239,9 +237,7 @@ body {
   font-size: 19px;
   margin-bottom: 0;
 }
-.packages-icons div:hover {
-  cursor: pointer;
-}
+
 .lines {
   position: absolute;
   right: 0px;
@@ -257,20 +253,6 @@ body {
   justify-content: center;
   flex-direction: column;
   padding-top: 2rem;
-}
-@media (min-width: 700px) {
-  .loyalty-card {
-    display: inline-block;
-    align-self: center;
-    padding: 2rem;
-  }
-  .loyalty-card img {
-    float: left;
-    padding: 0 1.25rem 0.75rem 0;
-  }
-  .packages-icons div {
-    width: 71%;
-  }
 }
 
 .txt-card {
@@ -339,6 +321,24 @@ body {
 }
 
 @media (min-width: 700px) {
+  .loyalty-card {
+    display: inline-block;
+    align-self: center;
+    padding: 2rem;
+  }
+  .loyalty-card img {
+    float: left;
+    padding: 0 1.25rem 0.75rem 0;
+  }
+  .mastern div {
+    width: 38%;
+  }
+  .masters div img {
+    height: 16rem;
+  }
+  #master-n{
+    flex-direction: row;
+  }
   .wrap-logo img {
     height: 50px;
   }
@@ -348,12 +348,6 @@ body {
   }
   .main-menu a {
     margin: 16px 30px;
-  }
-  .packages-icons {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
   }
   .name {
     font-size: 24px;
@@ -417,9 +411,7 @@ body {
   .txt-card b {
     font-size: 2.25rem;
   }
-  .packages-icons div {
-    width: 45%;
-  }
+
   .txt-card p {
     font-size: 1.8rem;
   }
@@ -431,7 +423,7 @@ body {
   .show-less {
     font-size: 1.5rem;
   }
-  .packages-icons div img {
+  .masters div img {
     height: 21rem;
   }
   .name {
@@ -450,7 +442,7 @@ body {
     padding: 0;
     font-size: 1.25rem;
   }
-  .packages-icons {
+  .masters {
     width: 90%;
     align-self: center;
   }
@@ -471,8 +463,5 @@ body {
 @media (min-width: 1200px) {
   .menu a {
     font-size: 2rem;
-  }
-  .packages-icons div {
-    width: 26%;
   }
 }
