@@ -186,7 +186,7 @@ body {
   opacity: 0;
   animation: ani 2.5s forwards;
 }
-.treatment {
+.masters {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -459,7 +459,7 @@ body {
     font-size: 1.25rem;
     padding: 1.5rem;
   }
-  .treatment {
+  .masters {
     padding-top: 2rem;
   }
 
